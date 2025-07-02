@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  
+  <div class="box-wrapper">
+    <div class="container">
+      <h2>🌡️Temperature Converter</h2>
+      <input type="number" id="temperatureInput" placeholder="Enter temperature" />
+      <div class="units">
+        <label><input type="radio" name="unit" value="celsius" checked /> Celsius (°C)</label>
+        <label><input type="radio" name="unit" value="fahrenheit" /> Fahrenheit (°F)</label>
+        <label><input type="radio" name="unit" value="kelvin" /> Kelvin (K)</label>
+      </div>
+      <div class="button-group">
+        <button onclick="convertTemperature()">Convert</button>
+        <button onclick="resetForm()" class="reset-btn">Reset</button>
+      </div>
+      <div class="loader" id="loader"></div>
+    </div>
+
+    <div class="container">
+      <h2>Converted Result</h2>
+      <div class="result" id="resultDisplay"></div>
+      <div class="thermometer">
+        <div class="mercury" id="mercury"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
